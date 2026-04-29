@@ -1,0 +1,31 @@
+# compiled java files
+
+*.class
+
+# build/output folders
+
+bin/
+out/
+build/
+target/
+
+# logs
+
+*.log
+
+# packaged files
+
+*.jar
+*.war
+*.ear
+
+# java temporary files
+
+*.tmp
+*.bak
+*.swp
+
+# vscode
+
+.vscode/
+
