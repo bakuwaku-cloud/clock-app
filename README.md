@@ -83,6 +83,57 @@ System.out.print("\r" + formattedTime);
 
 This prevents clutter and simulates a real-time terminal clock.
 
+## Installation 
+
+Download:
+https://www.oracle.com/java/technologies/downloads/
+
+Verify installation:
+
+`java -version`
+`javac -version`
+
+2. Install JavaFX SDK 26
+
+Download:
+https://openjfx.io/
+
+Extract to: `C:/YOUR/PATH/javafx-sdk-26/`
+
+## VS Code Setup (Optional but Recommended) 
+If you are using Visual Studio Code, you can configure JavaFX and Gson so you can run the app directly from the editor. 
+
+### 1. Install Extensions 
+Install: - Extension Pack for Java - Java Debugger --- 
+
+### 2. Create .vscode/launch.json 
+Create a folder named .vscode in your project root, then add:
+```bash
+{"version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "App",
+      "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-26\\lib\" --add-modules javafx.controls"
+    }
+  ]
+}
+```
+
+### 3. Create .vscode/settings.json
+```bash
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "C:/Program Files/Java/javafx-sdk-26/lib/**/*.jar"
+    ]
+}
+```
+
 ## How to Run
 
 ### 1. Compile
